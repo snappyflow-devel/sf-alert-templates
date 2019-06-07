@@ -1,0 +1,1 @@
+{"name": "Alert5", "type": "Alert", "query": {"group": "Linux Network", "metric": {"name": "tx_Drops", "plugin": "linux", "select": ["tx_Drops"], "where": "_tag_appName == $value AND _plugin == linux and _tag_Name == * and _nicName == aggregate", "checks": ["alarmState = alarm(GT, LongTermAvg + 20%, $name is $PV. Exceeded threshold $TH)", "isAliveCheck"]}}}
